@@ -1,0 +1,9 @@
+FROM Ubuntu:latest
+RUN apt-get update -y && apt-get install tomcat -y
+RUN apt-get install python:latest
+COPY ./clock.py /var/lib/tomcat6/webapps/
+EXPOSE 30
+CMD ["tomcat", "run"]
+
+
+
