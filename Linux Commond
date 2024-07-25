@@ -1,0 +1,344 @@
+Linux Common Commands and Vi Editor Shortcuts: 
+ 
+ls lists all the contents in the current working directory. 
+ 
+ls <path name> 
+By specifying the path after ls, the content in that path will be displayed. 
+ 
+ls –l  
+lists all the contents along with its owner settings, permissions & time stamp (long format) 
+ 
+ls -a lists all the hidden contents in the specified directory. 
+ 
+ls -lrt list of files in order of recently modified at last. 
+ 
+sudo 
+This command executes only that command with root/ superuser privileges. 
+ 
+sudo useradd <username> 
+Adding a new user 
+ 
+sudo passwd <username> 
+Setting a password for the new user 
+ 
+usermod -aG sudo <user_name>     
+Give root access to the user. 
+ 
+How to login in user= Su <user_name>  , How to log out user= exit
+
+How to give new use permission commond= chmod  <file name>
+
+
+sudo userdel <username> 
+Deleting the user 
+ 
+sudo groupadd <groupname> 
+Adding a new group 
+ 
+sudo groupdel <groupname> 
+Deleting the group 
+ 
+sudo usermod -g <groupname> <username> 
+Adding a user to a primary group 
+ 
+cat 
+This command can read, modify or concatenate text files. It also displays file contents. 
+ 
+cat -b 
+This adds line numbers to non-blank lines. 
+ 
+cat -n 
+This adds line numbers to all lines. 
+ 
+cat -s 
+This squeezes blank lines into one line. 
+ 
+cat –E 
+This shows $ at the end of line. 
+ 
+grep 
+This command searches for a particular string/ word in a text file. This is similar to “Ctrl+F” but executed via a CLI. 
+ 
+grep -i 
+Returns the results for case insensitive strings. 
+ 
+grep -n 
+Returns the matching strings along with their line number. 
+ 
+grep -v 
+Returns the result of lines not matching the search string. 
+ 
+grep -c 
+Returns the number of lines in which the results matched the search string. sort 
+This command sorts the results of a search either alphabetically or numerically. It also sorts files, file contents, and directories. 
+ 
+sort -r the flag returns the results in reverse order. 
+ 
+sort -f 
+the flag does case insensitive sorting 
+ 
+sort -n the flag returns the results as per numerical order. 
+ 
+chmod 
+This command is used to change the access permissions of files and directories. 
+chmod <permissions of user, group, others> {filename} 
+ 
+4 – read permission 
+2 – write permission 
+1 – execute permission 
+0 – no permission 
+ 
+chmod 777 <filename.sh> 
+Give permission to file 
+
+ Allowing FTP in the firewall
+   CMD= ufw allow ftp
+
+
+ 
+ifconfig 
+ifconfig (interface configuration) command is used to configure the kernelresident network interfaces. It is used at the boot time to set up the interfaces as necessary. After that, it is usually used when needed during debugging or when you need system tuning. Also, this command is used to assign the IP address and netmask to an interface or to enable or disable a given interface. 
+ 
+ifconfig -a 
+This option is used to display all the interfaces available, even if they are down. 
+ 
+ifconfig -s 
+Display a short list, instead of details. 
+ 
+history 
+history command is used to view the previously executed command. These commands are saved in a history file. In Bash shell history command shows the whole list of the command 
+ 
+history 10 
+To show the limited number of commands that executed previously. 
+ 
+ssh-keygen 
+Use the ssh-keygen command to generate a public/private authentication key pair. Authentication keys allow a user to connect to a remote system without supplying a password. Keys must be generated for each user separately. If you generate key pairs as the root user, only the root can use the keys. 
+ 
+ssh-keygen -t rsa 
+The following example creates the public and private parts of an RSA key. 
+ 
+curl 
+curl is a command-line tool to transfer data to or from a server, using any of the supported protocols (HTTP, FTP, IMAP, POP3, SCP, SFTP, SMTP, TFTP, TELNET, LDAP or FILE). This tool is preferred for automation since it is designed to work without user interaction. It can transfer multiple files at once. 
+ 
+curi -o 
+saves the downloaded file on the local machine with the name provided in the parameters. 
+ 
+apt-get 
+apt-get is a command-line tool that helps in handling packages in Linux. Its main task is to retrieve the information and packages from the authenticated sources for installation, upgrade and removal of packages along with their dependencies. Here APT stands for the Advanced Packaging Tool 
+ 
+apt-get update 
+This command is used to synchronize the package index files from their sources again. You need to perform an update before you upgrade. 
+ 
+ps 
+Every process in Linux has a unique ID and can be seen using the command ps. 
+ 
+sudo ps aux 
+a=show processes for all users u=display the process’s user/owner 
+x=also show processes not attached to a terminal 
+ 
+telnet localhost connect to a remote Linux computer. run programs remotely and conduct administration. 
+ 
+cd  
+Change directory. 
+ 
+mkdir 
+Make folder or directory. 
+ 
+rm <file_name> Remove file. 
+ 
+rm -r <dir_name> Remove directory dir 
+ 
+rm -f <file_name> Remove file forcefully. 
+ 
+rm -rf <dir_name> 
+Remove directory forcefully. 
+ 
+cp fileA fileB Copy fileA to fileB 
+ 
+mv fileA fileB 
+Move or rename fileA to fileB 
+ 
+touch <file_name> 
+Create file. 
+ 
+cat <file_name> 
+Displays the content of file. 
+ 
+more <file_name> 
+Displays first 10 lines of file. 
+ 
+tail <file_name> 
+Displays last 10 line of file. 
+ 
+ping host 
+Ping host and output result 
+ 
+wget file Download file. 
+ 
+top 
+Display top process. 
+ 
+kill pid 
+Kill process with process id. 
+ 
+netstat -r -v 
+Print network information, routing and connection. 
+ 
+df 
+Shows disk usage. 
+ 
+du 
+Shows directory space usage. 
+ 
+date 
+Shows the current Server date and time. 
+ 
+cal 
+Shows this month calendar. 
+ 
+whoami 
+Show user who is logged in. 
+ 
+tar cf file.tar files create a tar named file.tar containing files. 
+ 
+tar xf file.tar 
+extract the files from file.tar 
+ 
+tar czf file.tar.gz files create a tar with Gzip compression. 
+ 
+tar xzf file.tar.gz 
+extract a tar using Gzip 
+ 
+tar cjf file.tar.bz2 create a tar with Bzip2 compression. 
+ 
+tar xjf file.tar.bz2 extract a tar using Bzip2 
+ 
+gzip file 
+compresses file and renames it to file.gz 
+ 
+gzip -d file.gz 
+decompresses file.gz back to file 
+
+which docker <> this commond is which application save location we find
+ 
+Follow Shivam Agnihotri on LinkedIn for useful DevOps Content:  
+ 
+ 
+Shortcuts: 
+ 
+Ctrl+C – halts the current command. 
+Ctrl+Z – stops the current command, resume with fg in the foreground or bg in the background. 
+Ctrl+D – log out of current session, similar to exit. 
+Ctrl+W – erases one word in the current line. 
+Ctrl+U – erases the whole line. 
+Ctrl+R – type to bring up a recent command. 
+!! – repeats the last command. exit – log out of current session. 
+ 
+ 
+ 
+Linux Commands for Vi Editor: 
+ 
+ 
+:q 
+Simple exit 
+ 
+:w  
+Save the file but keep it open. 
+ 
+:sh  
+Execute Shell Commands   
+ 
+:q!  
+Exit without save. 
+ 
+:wq  
+Exit by saving. 
+ 
+shift + ^  
+Move cursor at start of line. 
+ 
+shift + $ 
+Move cursor at end of line. 
+ 
+shift + h 
+Move cursor at top of screen. 
+ 
+shift + L  
+Move cursor at bottom of screen. 
+ 
+shift + A  
+Insert Text at the end of line. 
+ 
+shift + n  
+Search Next   
+ 
+shift + s  
+Replace entire line.    
+             
+gg    
+To go in start of file 
+ 
+dd    
+To delete the entire line 
+ 
+shift + G 
+To go in end of file 
+ 
+shift + U 
+Undo all last changes in line.  
+   
+CTRL+d  	 
+Move forward 1/2 screen. 
+ 
+YP  
+Copy the current line and paste (Y for copy P for paste)      
+ 
+P 
+Move cursor where u want to put the copied text.    
+ 
+:s/pattern/replace/ 
+Syntax for replace old string with new, here word pattern is old string. (Only on the line) 
+ 
+:%s/pattern/replace/ 
+Replace at every occurrence. 
+ 
+dw  
+Delete word.         
+ 
+shift + d  
+Delete to end of line.     
+ 
+dd 
+Delete a single line at once. 
+ 
+ndd 
+Delete n numbers of line (n must be integer) 
+ 
+/ xyz 
+To search xyz in opened file 
+ 
+ 
+Note: These are very beginner level commands. Follow me on LinkedIn to get notifications for Advance DevOps content including real-time projects. 
+ 
+ 
+Follow Shivam Agnihotri on LinkedIn for useful DevOps Content:  
+ 
+Join DevOps Ocean Group: https://www.linkedin.com/groups/9189158/  
+ 
+If you are looking for a Dedicated 1:1 session with me to boost your DevOps Productivity, then please book a session from here: https://topmate.io/shivam_agnihotri  
+
+
+
+How to enable SSH 
+
+1)	ssh localhost
+2)	sudo apt update
+3)	sudo apt install openssh-server
+4)	sudo systemctl status ssh
+5)	sudo systemctl enable
+6)	sudo systemctl restart ssh
+7)	sudo systemctl status ssh
+
+How to delete file git & git hub
+    git rm FILENAME is delete file from linux machine
+    git commit -m “remove FILENAME” is delete file from git hub
